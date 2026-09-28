@@ -14,8 +14,8 @@
         }
 
         body {
-            background-color: #f0f4f8;
-            color: #334e68;
+            background-color: #000000;
+            color: #3399ff;
             line-height: 1.6;
             padding-top: 60px;
         }
@@ -28,14 +28,15 @@
 
         /* Student ID Card / Header Bar */
         header {
-            background-color: #102a43;
-            color: #ffffff;
+            background-color: #050505;
+            color: #3399ff;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 102, 255, 0.3);
+            border-bottom: 1px solid #0066ff;
         }
 
         nav {
@@ -58,35 +59,35 @@
 
         nav ul a {
             text-decoration: none;
-            color: #bcccdc;
+            color: #3399ff;
             font-size: 0.95rem;
             transition: color 0.2s;
         }
 
         nav ul a:hover {
-            color: #ffffff;
+            color: #66ccff;
         }
 
         /* Profile Introduction Section */
         .profile {
-            background: #ffffff;
+            background: #0a0a0a;
             padding: 40px;
             border-radius: 12px;
             margin-top: 40px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 5px solid #48bb78;
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.15);
+            border-left: 5px solid #0066ff;
         }
 
         .profile h1 {
-            color: #102a43;
+            color: #3399ff;
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
 
         .status-badge {
             display: inline-block;
-            background-color: #e6fffa;
-            color: #234e52;
+            background-color: #001a33;
+            color: #66ccff;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.85rem;
@@ -96,7 +97,7 @@
 
         .profile p {
             font-size: 1.1rem;
-            color: #486581;
+            color: #66b3ff;
         }
 
         /* Skills Tracker Section */
@@ -105,7 +106,7 @@
         }
 
         .learning-section h2 {
-            color: #102a43;
+            color: #3399ff;
             margin-bottom: 20px;
             font-size: 1.5rem;
         }
@@ -117,31 +118,35 @@
         }
 
         @media (max-width: 600px) {
-            .skills-grid { grid-template-columns: 1fr; }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .skill-card {
-            background: white;
+            background: #0a0a0a;
             padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 8px rgba(0, 102, 255, 0.12);
+            border: 1px solid #003366;
         }
 
         .skill-card h3 {
             margin-bottom: 15px;
             display: flex;
             justify-content: space-between;
+            color: #3399ff;
         }
 
         .progress-bar {
-            background-color: #dae1e7;
+            background-color: #001a33;
             height: 12px;
             border-radius: 6px;
             overflow: hidden;
         }
 
         .progress-fill {
-            background-color: #3182ce;
+            background-color: #0066ff;
             height: 100%;
             border-radius: 6px;
         }
@@ -149,14 +154,15 @@
         /* Classwork & Projects Section */
         .showcase {
             margin-top: 40px;
-            background: white;
+            background: #0a0a0a;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 8px rgba(0, 102, 255, 0.12);
+            border: 1px solid #003366;
         }
 
         .showcase h2 {
-            color: #102a43;
+            color: #3399ff;
             margin-bottom: 20px;
         }
 
@@ -166,7 +172,7 @@
 
         .item-list li {
             padding: 15px 0;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #003366;
         }
 
         .item-list li:last-child {
@@ -174,15 +180,19 @@
         }
 
         .item-list h4 {
-            color: #2b6cb0;
+            color: #3399ff;
             margin-bottom: 5px;
+        }
+
+        .item-list p {
+            color: #66b3ff;
         }
 
         /* Footer */
         footer {
             text-align: center;
             padding: 40px 0;
-            color: #627d98;
+            color: #3388cc;
             font-size: 0.85rem;
         }
     </style>
@@ -204,34 +214,57 @@
     </header>
 
     <main class="container">
-        
+
         <!-- Welcome Hero/Card -->
         <section id="about" class="profile">
             <span class="status-badge">🚀 Student & Aspiring Developer</span>
             <h1>Hi, I'm Michael!</h1>
-            <p>Welcome to my student dashboard. I am currently learning how to code and building digital tools. My primary focus right now is mastering computer logic with Python and designing structured web layouts using HTML.</p>
+            <p>
+                Welcome to my student dashboard. I am currently learning how to code
+                and building digital tools. My primary focus right now is mastering
+                computer logic with Python and designing structured web layouts using HTML.
+            </p>
         </section>
 
         <!-- Current Skills / Tracker Status -->
         <section id="learning" class="learning-section">
             <h2>Current Learning Track</h2>
+
             <div class="skills-grid">
-                
+
                 <!-- Python Skill Tracker -->
                 <div class="skill-card">
-                    <h3>🐍 Python <span style="font-size: 0.9rem; color: #486581;">Level 1</span></h3>
-                    <p style="margin-bottom: 10px; font-size: 0.9rem; color: #627d98;">Variables, Loops, and Functions</p>
+                    <h3>
+                        🐍 Python
+                        <span style="font-size: 0.9rem; color: #66b3ff;">Level 1</span>
+                    </h3>
+
+                    <p style="margin-bottom: 10px; font-size: 0.9rem; color: #66b3ff;">
+                        Variables, Loops, and Functions
+                    </p>
+
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%; background-color: #3182ce;"></div>
+                        <div class="progress-fill"
+                             style="width: 60%; background-color: #0066ff;">
+                        </div>
                     </div>
                 </div>
 
                 <!-- HTML Skill Tracker -->
                 <div class="skill-card">
-                    <h3>🌐 HTML5 <span style="font-size: 0.9rem; color: #486581;">Level 1</span></h3>
-                    <p style="margin-bottom: 10px; font-size: 0.9rem; color: #627d98;">Web Structure, Tags, and Forms</p>
+                    <h3>
+                        🌐 HTML5
+                        <span style="font-size: 0.9rem; color: #66b3ff;">Level 1</span>
+                    </h3>
+
+                    <p style="margin-bottom: 10px; font-size: 0.9rem; color: #66b3ff;">
+                        Web Structure, Tags, and Forms
+                    </p>
+
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width: 45%; background-color: #dd6b20;"></div>
+                        <div class="progress-fill"
+                             style="width: 45%; background-color: #0088ff;">
+                        </div>
                     </div>
                 </div>
 
@@ -241,19 +274,36 @@
         <!-- Student Assignment Tracker / Project List -->
         <section id="projects" class="showcase">
             <h2>School & Coding Projects</h2>
+
             <ul class="item-list">
+
                 <li>
                     <h4>Project 1: Python Terminal Calculator</h4>
-                    <p>A basic calculator program that runs inside the computer terminal. It takes user input numbers and computes addition, subtraction, multiplication, or division calculations.</p>
+                    <p>
+                        A basic calculator program that runs inside the computer terminal.
+                        It takes user input numbers and computes addition, subtraction,
+                        multiplication, or division calculations.
+                    </p>
                 </li>
+
                 <li>
                     <h4>Project 2: My First Website Layout</h4>
-                    <p>Built completely using structural HTML elements. It features a custom bio page layout containing image placeholders, formatted recipe directions, and a custom feedback sheet link.</p>
+                    <p>
+                        Built completely using structural HTML elements. It features a
+                        custom bio page layout containing image placeholders, formatted
+                        recipe directions, and a custom feedback sheet link.
+                    </p>
                 </li>
+
                 <li>
                     <h4>Project 3: Guess the Number Game</h4>
-                    <p>A mini random-number guessing game program written in Python that provides tips like "Too high" or "Too low" to players until they find the answer.</p>
+                    <p>
+                        A mini random-number guessing game program written in Python
+                        that provides tips like "Too high" or "Too low" to players
+                        until they find the answer.
+                    </p>
                 </li>
+
             </ul>
         </section>
 
